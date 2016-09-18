@@ -112,7 +112,7 @@ AddRemoveForm = React.createClass({
               placeholder="Quantity"
               onChange={this.handleQtyToAddChange}
             />
-            <input type="submit"/>
+            <button type="submit">Submit</button>
           </form>
         </div>
         <div>
@@ -143,7 +143,7 @@ AddRemoveForm = React.createClass({
               placeholder="Location"
               onChange={this.handleNewLocation}
             />
-            <input type="submit"/>
+            <button type="submit">Submit</button>
           </form>
         </div>
         <div>
@@ -159,7 +159,7 @@ AddRemoveForm = React.createClass({
               placeholder="Quantity"
               onChange={this.handleQtyToRemoveChange}
             />
-            <input type="submit"/>
+            <button type="submit">Submit</button>
           </form>
         </div>
 
