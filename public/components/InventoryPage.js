@@ -84,7 +84,6 @@ InventoryItem = React.createClass({
       data: updatedPart,
       success: function(response) {
         console.log(response);
-        this.props.getItemsFromServer();
         this.setState({
           inventory:
             <tr onDoubleClick={this.updateEverything}>
@@ -123,25 +122,20 @@ InventoryItem = React.createClass({
       inventory: <tr onDoubleClick={this.updateEverything}>
         <td>
           <input placeholder={this.props.partNumber} onChange={this.changePN}/>
-          {this.props.partNumber}
         </td>
         <td>
           <input placeholder={this.props.description} onChange={this.changeDescription}/>
-          {this.props.description}
         </td>
         <td>{this.props.totalCurrentQuantity}</td>
         <td>
           <input placeholder={this.props.unitOfIssue} onChange={this.changeUI}/>
-          {this.props.unitOfIssue}
         </td>
         <td>
           <input placeholder={this.props.costperUnit} onChange={this.changeCU}/>
-          {this.props.costperUnit}
         </td>
         <td>{this.props.totalCurrentCost}</td>
         <td>
           <input placeholder={this.props.location} onChange={this.changeLocation}/>
-          {this.props.location}
         </td>
         <td>
           <button onClick={this.submitChange}>Update</button>
@@ -165,7 +159,8 @@ InventoryItem = React.createClass({
       Description: "",
       UI: "",
       CU: "",
-      location: ""
+      location: "",
+      data: ""
     }
   },
   render: function(){
